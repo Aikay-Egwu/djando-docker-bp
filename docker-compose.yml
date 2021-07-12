@@ -1,7 +1,13 @@
 version: '3.8'
 
 services:
-  
+  app:
+    build:
+      context: .
+    volumes:
+      - static_data:/vol/web
+    env_file:
+      - .env
 
 volumes:
   static_data
